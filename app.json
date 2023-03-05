@@ -1,13 +1,95 @@
-from tg_bot.sample_config import Config
 
 
-class Development(Config):
-    OWNER_ID = 254318997  # my telegram ID
-    OWNER_USERNAME = "SonOfLars"  # my telegram username
-    API_KEY = "your bot api key"  # my api key, as provided by the botfather
-    SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
-    MESSAGE_DUMP = '-1234567890' # some group chat that your bot is a member of
-    USE_MESSAGE_DUMP = True
-    SUDO_USERS = [18673980, 83489514]  # List of id's for users which have sudo access to the bot.
-    LOAD = []
-    NO_LOAD = ['translation']
+    "name": "STAR MUSIC",
+    "description": "Telegram Group Calls streaming bot with some useful features.",
+    "logo": "https://telegra.ph/file/d5c6c3b2b5a43383baf7a.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "ENV": {
+        "description": "الايدي نفس الموقع اللي فوق",
+        "value": "",
+        "required": true
+      },
+      "TOKEN": {
+        "description": "احصل على الهاش من هنا https://my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "اتركها كما هي",
+        "value": "True",
+        "required": false
+      },
+      "OWNER_USERNAME": {
+        "description": "احصل على توكن البوت من botfather",
+        "value": "",
+        "required": true
+      },
+      "DATABASE_URL": {
+        "description": "احصل عليها من الموقع https://cloud.mongodb.com .",
+        "value": "",
+        "required": true
+      },
+      "SUDO_USERS": {
+        "description": "اسم بوت الميوزك",
+        "value": "",
+        "required": true
+      },
+      "SUPPORT_USERS": {
+        "description": "ايدي مالك البوت",
+        "value": "",
+        "required": true
+
+      },
+      "HEROKU_API_KEY": {
+        "description": "احصل عليها من هنا https://dashboard.heroku.com/account",
+        "value": "",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "اسم اكونت الهيروكو",
+        "value": "",
+        "required": false
+      },
+      "LOG_GROUP_ID": {
+        "description": "ايدي جروب البوت . يجب عليك اضافة البوت في المجموعه ورفعه مشرف بكامل الصلاحيات .",
+        "value": "",
+        "required": true
+      },
+      "UPSTREAM_REPO": {
+        "description": "اتركها كما هي",
+        "value": "https://github.com/DaRrkNneSs1/SOURCE_STAR",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "اتركها كما هي",
+        "value": "master",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "eco"
+          }
+      }
+  }
