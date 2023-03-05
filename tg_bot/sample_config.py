@@ -10,12 +10,12 @@ class Config(object):
     LOGGER = True
 
     # REQUIRED
-    API_KEY = "YOUR KEY HERE"
-    OWNER_ID = "YOUR ID HERE"  # If you dont know, run the bot and do /id in your private chat with it
-    OWNER_USERNAME = "YOUR USERNAME HERE"
+    API_KEY = "6283403652:AAH2md6lVd6UVcF6HGMLe9DQgoWB-pshUKk"
+    OWNER_ID = "830359032"  # If you dont know, run the bot and do /id in your private chat with it
+    OWNER_USERNAME = "@DaRrKNneSs_1"
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = 'sqldbtype://username:pw@hostname:port/db_name'  # needed for any database modules
+    SQLALCHEMY_DATABASE_URI = 'postgres://oufnqgyb:QKtc9JZLGagCRjunNu_RZ-Gj1-dlxt_9@queenie.db.elephantsql.com/oufnqgyb'  # needed for any database modules
     MESSAGE_DUMP = None  # needed to make sure 'save from' messages persist
     LOAD = []
     # sed has been disabled after the discovery that certain long-running sed commands maxed out cpu usage
