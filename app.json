@@ -7,7 +7,6 @@
     "python3",
     "telegram",
     "bot",
-
     "telegram-bot",
     "pyrogram"
     ],
@@ -47,7 +46,6 @@
         "description": "ايدي مالك البوت",
         "value": "",
         "required": true
-
       },
       "HEROKU_API_KEY": {
         "description": "احصل عليها من هنا https://dashboard.heroku.com/account",
